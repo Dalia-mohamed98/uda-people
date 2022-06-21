@@ -117,7 +117,10 @@ jobs:
           command: |
             cd frontend
             npm install
-          
+            # npm install oauth-sign@^0.9.0
+            npm audit fix --audit-level=critical --force
+            npm audit --audit-level=critical
+
   scan-backend:
     docker:
       - image: cimg/node:13.8.0
@@ -131,7 +134,10 @@ jobs:
             cd backend
             npm install
             # npm install oauth-sign@^0.9.0
-          
+            npm audit fix --audit-level=critical --force
+            npm audit fix --audit-level=critical --force
+            npm audit --audit-level=critical
+
   notify:
     docker:
       - image: 'cimg/base:stable'
@@ -284,7 +290,7 @@ jobs:
       - run:
           name: Get backend url
           command: |
-            API_URL=$(curl --insecure https://kvdb.io/XLd8HgwASi4QGKrXEgQNbo/backend_url)
+            API_URL= curl --insecure https://kvdb.io/XLd8HgwASi4QGKrXEgQNbo/backend_url
             echo $API_URL
             echo "NODE_ENV=production" >> frontend/.env
             echo "API_URL=${API_URL}" >> frontend/.env
