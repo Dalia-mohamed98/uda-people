@@ -290,7 +290,7 @@ jobs:
       - run:
           name: Get backend url
           command: |
-            API_URL= "123456"
+            API_URL= $(curl --insecure https://kvdb.io/XLd8HgwASi4QGKrXEgQNbo/backend_url)
             echo $API_URL
             echo "NODE_ENV=production" >> frontend/.env
             echo "API_URL = ${API_URL}" >> frontend/.env
@@ -359,7 +359,7 @@ jobs:
       - run:
           name: Backend smoke test.
           command: |
-            export backend_url=$(curl --insecure https://kvdb.io/XLd8HgwASi4QGKrXEgQNbo/backend_url)
+            export backend_url= $(curl --insecure https://kvdb.io/XLd8HgwASi4QGKrXEgQNbo/backend_url)
             echo $backend_url
             # curl "$backend_url/api/status"
       - run:
