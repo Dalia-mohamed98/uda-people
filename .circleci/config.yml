@@ -290,8 +290,9 @@ jobs:
       - run:
           name: Get backend url
           command: |
-            API_URL= $(curl --insecure https://kvdb.io/XLd8HgwASi4QGKrXEgQNbo/backend_url)
+            API_URL=$(curl --insecure https://kvdb.io/XLd8HgwASi4QGKrXEgQNbo/backend_url)
             echo $API_URL
+            echo "${API_URL}"
             echo "NODE_ENV=production" >> frontend/.env
             echo "API_URL = ${API_URL}" >> frontend/.env
             cat frontend/.env
