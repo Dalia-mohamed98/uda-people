@@ -2,7 +2,7 @@ Public Url to GitHub repository [URL01]
   https://github.com/Dalia-mohamed98/uda-people
 
 Public URL for your S3 Bucket [URL02]
-  http://udapeople-45f5dae.s3-website-us-east-1.amazonaws.com
+  http://udapeople-a24d969.s3-website-us-east-1.amazonaws.com
 
 Public URL for your CloudFront distribution [URL03]
   https://djlv8edl35e16.cloudfront.net
