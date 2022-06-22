@@ -5,7 +5,7 @@ Public URL for your S3 Bucket [URL02]
   http://udapeople-a24d969.s3-website-us-east-1.amazonaws.com
 
 Public URL for your CloudFront distribution [URL03]
-  https://djlv8edl35e16.cloudfront.net
+  http://djlv8edl35e16.cloudfront.net
 
 Public URLs to deployed application back-end in EC2 [URL04]
   https://52.207.234.50:3030/api/status
